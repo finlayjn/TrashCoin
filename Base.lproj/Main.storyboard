@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WB4-wU-NW8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Pmb-0X-Jfl">
+            <objects>
+                <navigationController id="WB4-wU-NW8" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ZOI-Fu-IS3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UUm-yv-3c6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lBX-mX-Wy2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="-770"/>
+        </scene>
+        <!--Collect-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Collect" id="BYZ-38-t0r" customClass="MapVC" customModule="TrashCoin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DoB-VJ-daQ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </mapView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tbl-Ua-gee" customClass="FanMenu" customModule="FanMenu">
+                                <rect key="frame" x="0.0" y="696" width="414" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="4qZ-Vo-g2O"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DoB-VJ-daQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0C0-IS-EVA"/>
+                            <constraint firstItem="Tbl-Ua-gee" firstAttribute="centerX" secondItem="DoB-VJ-daQ" secondAttribute="centerX" id="0Kj-zW-OG0"/>
+                            <constraint firstItem="DoB-VJ-daQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3Kn-e4-yOD"/>
+                            <constraint firstItem="Tbl-Ua-gee" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CFU-5d-uJu"/>
+                            <constraint firstAttribute="bottom" secondItem="DoB-VJ-daQ" secondAttribute="bottom" id="CUd-hO-Voy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DoB-VJ-daQ" secondAttribute="trailing" id="aqB-Nz-4ll"/>
+                            <constraint firstItem="Tbl-Ua-gee" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xE0-v1-gDd"/>
+                            <constraint firstItem="Tbl-Ua-gee" firstAttribute="bottom" secondItem="DoB-VJ-daQ" secondAttribute="bottom" constant="50" id="yJE-VV-AQI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="TrashCoin" largeTitleDisplayMode="never" id="hMb-bm-gQB">
+                        <barButtonItem key="leftBarButtonItem" title="TC$1.50" id="IAk-YA-NAW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Report" image="trashCoinclear" id="aTT-NW-qXZ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="test:" destination="BYZ-38-t0r" id="aqp-Eq-wgn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="fanMenu" destination="Tbl-Ua-gee" id="INY-IR-8ST"/>
+                        <outlet property="mapView" destination="DoB-VJ-daQ" id="bz2-UZ-bac"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="485.50724637681162" y="-770.08928571428567"/>
+        </scene>
+        <!--ProfileVC-->
+        <scene sceneID="j25-EW-35G">
+            <objects>
+                <tableViewController storyboardIdentifier="ProfileVC" id="F2S-Cc-3ht" customClass="ProfileVC" customModule="TrashCoin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="16X-nq-X4g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="normalCell" textLabel="vav-AU-tMd" detailTextLabel="HUq-P0-MFy" rowHeight="65" style="IBUITableViewCellStyleSubtitle" id="qF5-no-Eaa">
+                                <rect key="frame" x="20" y="55.5" width="374" height="65"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qF5-no-Eaa" id="O3F-Sh-rFW">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="65"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Ricardo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vav-AU-tMd">
+                                            <rect key="frame" x="20" y="10.5" width="76" height="24"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="TC$16.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HUq-P0-MFy">
+                                            <rect key="frame" x="20" y="36" width="70" height="18"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="F2S-Cc-3ht" id="WD3-PU-CT6"/>
+                            <outlet property="delegate" destination="F2S-Cc-3ht" id="ye7-by-rIo"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEc-vE-acb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1491" y="-786"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="trashCoinclear" width="33.333332061767578" height="33.333332061767578"/>
+    </resources>
+</document>

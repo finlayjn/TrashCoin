@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>702409916950-rtl78hbiikjkitbe6k4rqs246eq4gkk1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.702409916950-rtl78hbiikjkitbe6k4rqs246eq4gkk1</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>702409916950-s3k7hv3qbio9l7sk12mam10ktib57a4q.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCg8gF7Yh8-OekmAU34DBZSqOirXtwI4io</string>
+	<key>GCM_SENDER_ID</key>
+	<string>702409916950</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.FinlayNathan.TrashCoin</string>
+	<key>PROJECT_ID</key>
+	<string>trash-coin</string>
+	<key>STORAGE_BUCKET</key>
+	<string>trash-coin.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:702409916950:ios:bd0fb2dfba03a0c7c82b37</string>
+	<key>DATABASE_URL</key>
+	<string>https://trash-coin.firebaseio.com</string>
+</dict>
+</plist>
